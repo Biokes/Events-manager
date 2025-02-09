@@ -1,9 +1,11 @@
 import Navbar from "../reuseables/navbar";
+import Hero from "./rightbar";
 
 export default function Home() {
     return (
-        <div className='bg-white w-[100vw] h-[100vh]'>
+        <div className='bg-white h-full w-full'>
             <Navbar />
+            <Hero/>
         </div>
     )
 }
