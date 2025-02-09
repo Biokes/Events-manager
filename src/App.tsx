@@ -1,11 +1,10 @@
 import './App.css'
+import Home from './components/home/home'
 import './index.css'
-import Home from ""
-function App() {
+export default function App() {
 
   return (
     <Home/>
   )
 }
 
-export default App

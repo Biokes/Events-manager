@@ -67,12 +67,3 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
-.navbar{
-  @apply flex felx-col justify-between items-center
-}
-.name{
-
-}
-.logo{
-  
-}
