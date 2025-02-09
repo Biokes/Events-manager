@@ -32,14 +32,14 @@ export default function Hero() {
 
     const upcomingEvents = [
         {
-            image: 'https://s3-alpha-sig.figma.com/img/1fa2/e4f1/93c02f062063ff30fcb0d91504581b9f?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=XK5T42kes5Nq~UnVahS5rcnlyERnJs4FLB~KByaI~uC0WsNBJcS-pwe4uxx8ZFIcy8VabVxSdBmbVFWj2LhrxBuitW--SgUstJg4A0bCj3ETrkdtwf7N5if-CbV~MY1Y8rDZybkfqBtZMPgPWd5H1Rb72Ih7J3NO6dOV6mgU6FgiYl~UFqriG07DPwYSSY07eShtT2C8SzHnx2yG8J5GDVb15vNJ2~4j~7chn063n0og~gYUZ05G3ST0xP8x5PGE3ghg7SffJbk5ILGRLTG6PSUNDSlwDkYjckbxshwZ~2W5RsqhGZiVL6~aMnBxPpjcJa-W7pmW~epwPjR4xTCIgQ__',
+            image: 'https://res.cloudinary.com/depwujqik/image/upload/v1739063690/image_5_dkeknx.png',
             event: 'NeonGlow festival',
             Description: 'NeonGlow Festival is more than just a music festival—its a celebration of culture, creativity, and community. As our flagship annual event. NeonGlow Festival brings the spirit and vision...',
             time: '24 Jul 2025, 5:20 AM',
             price: 'N5000'
         },
         {
-            image: 'https://s3-alpha-sig.figma.com/img/4cdb/39dc/68a6c2d1ee116fcf5d1af34f2ca32c83?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=bDx4SBFLmLKxuzQhud1FXt183xlApsd-CJ-1l-SdOIxuDip0Z741FobqM1Ca3VDiP4bp9bu0Jg4TmoxC~5bjGEYnC-yUSvl9SuUkcqDEjl3m3lCjqMooLzeww080ffmlH~ojZQoYqvWh2JY3zpwiiQretabASKlamOYBmWYtqRqr0UnBOKwxPa4CyMnUOAU0nWLsimiM0MEgDbTgZH32BZpY3n8ap0ykpCMYSuofBG5FaMJ947IeOMmePntRFEnJMMsHj6uJwRfM-ew65K0LgIAIJx-9wVLu9j10UIrdq5tp6asbIhwDjSLPTjXjS2BuCV5x-0IZs3SFU8-KbcqgsQ__',
+image:'https://res.cloudinary.com/depwujqik/image/upload/v1739063690/image_6_ypt1ad.png',
             event: 'rave festival',
             Description: 'NeonGlow Festival is more than just a music festival—its a celebration of culture, creativity, and community. As our flagship annual event. NeonGlow Festival brings the spirit and vision...',
             time: '24 Jul 2025, 5:20 AM',
@@ -96,7 +96,7 @@ export default function Hero() {
                                 {
                                     upcomingEvents.map((data, index) => (
                                         <div key={index} className={'border-[1px] border-gray-200 gap-[4px] h-[70px] sm:h-[80px] md:h-[100px] rounded-md flex'}>
-                                            <img src={data.image} className={'h-full w-[25%] sm:w-[25%] rounded-md border-[1px] border-black'} alt="event picture" />
+                                            <img src={data.image} className={'h-full w-[25%] sm:w-[25%] rounded-md'} alt="event picture" />
                                             <section className={'w-full px-[5px] sm:pt-[5px] justify-around flex flex-col'}>
                                                 <section className={'flex justify-between items-center h-[24px] w-full pr-[5px]'}>
                                                     <p className={'capitalize font-[600] text-[10px] sm:text-[13px] md:text-[15px]'} style={{ fontFamily: 'Noto Sans' }}>
