@@ -46,26 +46,26 @@ export default function Footer() {
             <TableContainer component={Paper}>
                 <Table>
                     <TableHead>
-                        <TableRow>
-                            <TableCell sx={{whiteSpace:'nowrap'}}>Ticket ID</TableCell>
-                            <TableCell sx={{whiteSpace:'nowrap'}}>Name</TableCell>
-                            <TableCell sx={{whiteSpace:'nowrap'}}>Event</TableCell>
-                            <TableCell sx={{whiteSpace:'nowrap'}}>No of tickets</TableCell>
-                            <TableCell sx={{whiteSpace:'nowrap'}}>total price</TableCell>
-                            <TableCell sx={{whiteSpace:'nowrap'}}>Date purchased</TableCell>
-                            <TableCell sx={{whiteSpace:'nowrap'}}>status</TableCell>
+                        <TableRow sx={{background:'#EAECF0'}}>
+                            <TableCell sx={{whiteSpace:'nowrap',padding: "7px"}}>Ticket ID</TableCell>
+                            <TableCell sx={{whiteSpace:'nowrap',padding: "7px"}}>Name</TableCell>
+                            <TableCell sx={{whiteSpace:'nowrap',padding: "7px"}}>Event</TableCell>
+                            <TableCell sx={{whiteSpace:'nowrap',padding: "7px"}}>No of tickets</TableCell>
+                            <TableCell sx={{whiteSpace:'nowrap',padding: "7px"}}>total price</TableCell>
+                            <TableCell sx={{whiteSpace:'nowrap',padding: "7px"}}>Date purchased</TableCell>
+                            <TableCell sx={{whiteSpace:'nowrap',padding: "7px"}}>status</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
                         {rows.map((row) => (
                             <TableRow key={row.id}>
-                                <TableCell>{ row.id}</TableCell>
-                                <TableCell>{row.name}</TableCell>
-                                <TableCell>{row.event}</TableCell>
-                                <TableCell>{row.noOfTickets}</TableCell>
-                                <TableCell>{row.totalPrice}</TableCell>
-                                <TableCell>{row.date}</TableCell>
-                                <TableCell>{row.status}</TableCell>
+                                <TableCell sx={{padding: "10px"}}>{ row.id}</TableCell>
+                                <TableCell sx={{padding: "10px"}}>{row.name}</TableCell>
+                                <TableCell sx={{padding: "10px"}}>{row.event}</TableCell>
+                                <TableCell  sx={{padding: "10px"}}>{row.noOfTickets}</TableCell>
+                                <TableCell  sx={{padding: "10px"}}>{row.totalPrice}</TableCell>
+                                <TableCell  sx={{padding: "10px"}}>{row.date}</TableCell>
+                                <TableCell  sx={{padding: "10px"}}>{row.status}</TableCell>
                             </TableRow>
                         ))}
                     </TableBody>
