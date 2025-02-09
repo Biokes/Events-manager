@@ -1,3 +1,4 @@
+import Footer from "./footer";
 import AnalyticsIcon from '../../icons/analyticsIcon'
 import CalendarIcon from '../../icons/calendarIcon'
 import HomeIcon from '../../icons/homeIcon'
@@ -30,14 +31,14 @@ export default function Hero() {
 
     const upcomingEvents = [
         {
-            image: '',
+            image: 'https://s3-alpha-sig.figma.com/img/1fa2/e4f1/93c02f062063ff30fcb0d91504581b9f?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=XK5T42kes5Nq~UnVahS5rcnlyERnJs4FLB~KByaI~uC0WsNBJcS-pwe4uxx8ZFIcy8VabVxSdBmbVFWj2LhrxBuitW--SgUstJg4A0bCj3ETrkdtwf7N5if-CbV~MY1Y8rDZybkfqBtZMPgPWd5H1Rb72Ih7J3NO6dOV6mgU6FgiYl~UFqriG07DPwYSSY07eShtT2C8SzHnx2yG8J5GDVb15vNJ2~4j~7chn063n0og~gYUZ05G3ST0xP8x5PGE3ghg7SffJbk5ILGRLTG6PSUNDSlwDkYjckbxshwZ~2W5RsqhGZiVL6~aMnBxPpjcJa-W7pmW~epwPjR4xTCIgQ__',
             event: 'NeonGlow festival',
             Description: 'NeonGlow Festival is more than just a music festival—its a celebration of culture, creativity, and community. As our flagship annual event. NeonGlow Festival brings the spirit and vision...',
             time: '24 Jul 2025, 5:20 AM',
             price: 'N5000'
         },
         {
-            image: '',
+            image: 'https://s3-alpha-sig.figma.com/img/4cdb/39dc/68a6c2d1ee116fcf5d1af34f2ca32c83?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=bDx4SBFLmLKxuzQhud1FXt183xlApsd-CJ-1l-SdOIxuDip0Z741FobqM1Ca3VDiP4bp9bu0Jg4TmoxC~5bjGEYnC-yUSvl9SuUkcqDEjl3m3lCjqMooLzeww080ffmlH~ojZQoYqvWh2JY3zpwiiQretabASKlamOYBmWYtqRqr0UnBOKwxPa4CyMnUOAU0nWLsimiM0MEgDbTgZH32BZpY3n8ap0ykpCMYSuofBG5FaMJ947IeOMmePntRFEnJMMsHj6uJwRfM-ew65K0LgIAIJx-9wVLu9j10UIrdq5tp6asbIhwDjSLPTjXjS2BuCV5x-0IZs3SFU8-KbcqgsQ__',
             event: 'rave festival',
             Description: 'NeonGlow Festival is more than just a music festival—its a celebration of culture, creativity, and community. As our flagship annual event. NeonGlow Festival brings the spirit and vision...',
             time: '24 Jul 2025, 5:20 AM',
@@ -47,14 +48,14 @@ export default function Hero() {
 
     return (
         <div className={'flex h-full'}>
-            <div className='hidden md:w-[30vw] lg:w-[285px] bg-[white] lg:h-[92vh] border-r-[1px] border-gray-200 md:flex flex-col justify-between'>
-                <div className={'flex flex-col justify-between items-center py-[16px]  gap-[15px]'}>
+            <div className='hidden md:w-[30vw] lg:w-[285px] bg-[white] border-r-[1px] border-gray-200 md:flex flex-col justify-between'>
+                <div className={'flex flex-col justify-between items-center py-[16px] gap-[15px] px-[5px] lg:px-0'}>
                     {
                         rightBarList[0].map((data) => (
-                            <div key={data.text} className={`rounded-sm w-[80%] flex justify-start items-center gap-[10px] text-[15px] py-[5px] pl-[10px] 
-                    ${currentIndex === data.text ? 'bg-red-100 font-[500]' : ''}`} onClick={() => { toggle(data.text) }}>
+                            <div key={data.text} className={`rounded-sm w-full lg:w-[80%] flex justify-start items-center gap-[5px] lg:gap-[10px] py-[5px] pl-[10px] 
+                                                ${currentIndex === data.text ? 'bg-red-100 font-[500]' : ''}`} onClick={() => { toggle(data.text) }}>
                                 {data.icon(currentIndex === data.text ? color[1] : color[0])}
-                                <p className={`capitalize text-[14px] text-nowrap${data.text === currentIndex ? 'text-red-900' : 'text-black'}`}>{data.text}</p>
+                                <p className={`capitalize text-[10px] text-[8px] lg:text-[15px] text-nowrap${data.text === currentIndex ? 'text-red-900' : 'text-black'}`}>{data.text}</p>
                             </div>
                         ))
                     }
@@ -65,7 +66,7 @@ export default function Hero() {
                             <div key={data.text} className={`rounded-sm w-[80%] flex justify-start items-center gap-[10px] text-[15px] py-[5px] pl-[10px] 
                     ${currentIndex === data.text ? 'bg-red-100 font-[500]' : ''}`} onClick={() => { toggle(data.text) }}>
                                 {data.icon(currentIndex === data.text ? color[1] : color[0])}
-                                <p className={`capitalize text-[15px] ${data.text === currentIndex ? 'text-red-900' : 'text-black'}`}>{data.text}</p>
+                                <p className={`capitalize text-[10px] lg:text-[15px] ${data.text === currentIndex ? 'text-red-900' : 'text-black'}`}>{data.text}</p>
                             </div>
                         ))
                     }
@@ -81,68 +82,70 @@ export default function Hero() {
                     </div>
                     <button className={'bg-[#4D0916] text-white font-[600] px-[10px] md:px-0 md:w-[150px] flex justify-center items-center lg:w-[170px] h-[30px] lg:h-[35px] text-[14px]  capitalize'}>create event</button>
                 </div>
-                <div className={'w-full flex flex-col lg:flex-row lg:justify-around items-center lg:h-[300px] gap-[10px] lg:gap-0'}>
-                    <div className='bg-white lg:w-[55%] p-[10px] border-[1px] border-[#4D0916] rounded-md'>
-                        <section className='flex justify-between items-cemter pr-[7px]'>
-                            <p className={'text-[15px] md:text-[17px] capitalize font-[600] '}>
-                                upcoming events
-                            </p>
-                            <p className={'text-[13px] md:text-[17px] hover:cursor-pointer text-[#4D0916] underline'}>view all</p>
-                        </section>
-                        <div className={'flex flex-col gap-[7px] lg:gap-[5px]'}>
-                            {
-                                upcomingEvents.map((data, index) => (
-                                    <div key={index} className={'border-[1px] border-gray-200 gap-[4px] h-[90px] md:h-[110px] rounded-md flex'}>
-                                        <img src={data.image} className={'h-full w-[30%] rounded-md border-[1px] border-black'} alt="event picture" />
-                                        <section className={'w-full px-[5px] pt-[5px] justify-around flex flex-col'}>
-                                            <section className={'flex justify-between items-center h-[24px] w-full pr-[5px]'}>
-                                                <p className={'capitalize font-[600]'} style={{ fontFamily: 'Noto Sans' }}>
-                                                    {data.event}
+                <div>
+                    <div className={'w-full flex flex-col lg:flex-row lg:justify-around items-center lg:h-[300px] gap-[10px] lg:gap-0'}>
+                        <div className='bg-white lg:w-[55%] p-[10px] border-[1px] border-[#4D0916] rounded-md'>
+                            <section className='flex justify-between items-cemter pr-[7px]'>
+                                <p className={'text-[15px] md:text-[17px] capitalize font-[600] '}>
+                                    upcoming events
+                                </p>
+                                <p className={'text-[13px] md:text-[17px] hover:cursor-pointer text-[#4D0916] underline'}>view all</p>
+                            </section>
+                            <div className={'flex flex-col gap-[7px] lg:gap-[5px]'}>
+                                {
+                                    upcomingEvents.map((data, index) => (
+                                        <div key={index} className={'border-[1px] border-gray-200 gap-[4px] h-[90px] md:h-[110px] rounded-md flex'}>
+                                            <img src={data.image} className={'h-full w-[30%] rounded-md border-[1px] border-black'} alt="event picture" />
+                                            <section className={'w-full px-[5px] pt-[5px] justify-around flex flex-col'}>
+                                                <section className={'flex justify-between items-center h-[24px] w-full pr-[5px]'}>
+                                                    <p className={'capitalize font-[600]'} style={{ fontFamily: 'Noto Sans' }}>
+                                                        {data.event}
+                                                    </p>
+                                                    <p className={'text-[12px] text-[#4D0916] md:text-[15px] hover:cursor-pointer underline'}>
+                                                        view more
+                                                    </p>
+                                                </section>
+                                                <p className={'text-[8px] md:text-[11px]'}>
+                                                    {data.Description}
                                                 </p>
-                                                <p className={'text-[12px] text-[#4D0916] md:text-[15px] hover:cursor-pointer underline'}>
-                                                    view more
-                                                </p>
+                                                <section className='w-full justify-between flex pr-[5px]'>
+                                                    <p className={'text-[10px] md:text-[14px] font-[550]'} style={{ fontFamily: 'Noto Sans' }}>{data.time}</p>
+                                                    <p className={'text-[10px] md:text-[14px] font-[550]'} style={{ fontFamily: 'Noto Sans' }}>{data.price}</p>
+                                                </section>
                                             </section>
-                                            <p className={'text-[8px] md:text-[11px]'}>
-                                                {data.Description}
-                                            </p>
-                                            <section className='w-full justify-between flex pr-[5px]'>
-                                                <p className={'text-[10px] md:text-[14px] font-[550]'} style={{ fontFamily: 'Noto Sans' }}>{data.time}</p>
-                                                <p className={'text-[10px] md:text-[14px] font-[550]'} style={{ fontFamily: 'Noto Sans' }}>{data.price}</p>
-                                            </section>
-                                        </section>
-                                    </div>
-                                ))
-                            }
+                                        </div>
+                                    ))
+                                }
+                            </div>
                         </div>
-                    </div>
-                    <div className={'lg:w-[40%] w-full bg-white rounded-md border-[1px] border-[#4D0916] rounded-md'}>
-                        <div className={' w-full p-[20px] gap-[20px]'}>
-                            <header className={'h-[30px] flex justify-between'}>
-                                <div className='flex gap-[4px] justify-center items-center'>
-                                    <img src={moneyIcon} className={'w-[16px] h-[16px]'} alt="" />
-                                    <p className='text-[15px] h-[20px] -mt-[4px]'>Revenue insight</p>
-                                </div>
-                                <div className='rounded-md flex justify-around items-center h-[30px] border-[1px] border-gray-100 cursor-pointer'>
-                                    <KeyboardArrowLeftIcon />
-                                    <p>2024</p>
-                                    <KeyboardArrowRightIcon />
-                                </div>
-                            </header>
-                            <div className={'flex justify-start items-center w-full gap-[10px]'}>
-                                <div className='w-[70px] h-[20px] gap-[8px] flex justify-center items-center '>
-                                    <p className={'w-[10px] h-[10px] rounded-[50%] bg-[#4D0916]'}></p>
-                                    <p className={'font-[400] text-[14px] h-[20px] -ml-[5px]'} style={{ fontFamily: 'Noto sans' }}>Revenue</p>
-                                </div>
-                                <div className='w-auto h-[20px] gap-[8px] flex justify-center items-center '>
-                                    <p className={'w-[8px] h-[10px] rounded-[50%] bg-[#E91B41]'}></p>
-                                    <p className={'font-[400] text-[14px] h-[20px] text-nowrap'} style={{ fontFamily: 'Noto sans' }}>Ticket sales</p>
+                        <div className={'lg:w-[40%] w-full bg-white rounded-md border-[1px] border-[#4D0916] rounded-md'}>
+                            <div className={' w-full p-[20px] gap-[20px]'}>
+                                <header className={'h-[30px] flex justify-between'}>
+                                    <div className='flex gap-[4px] justify-center items-center'>
+                                        <img src={moneyIcon} className={'w-[16px] h-[16px]'} alt="" />
+                                        <p className='text-[15px] h-[20px] -mt-[4px]'>Revenue insight</p>
+                                    </div>
+                                    <div className='rounded-md flex justify-around items-center h-[30px] border-[1px] border-gray-100 cursor-pointer'>
+                                        <KeyboardArrowLeftIcon />
+                                        <p>2024</p>
+                                        <KeyboardArrowRightIcon />
+                                    </div>
+                                </header>
+                                <div className={'flex justify-start items-center w-full gap-[10px]'}>
+                                    <div className='w-[70px] h-[20px] gap-[8px] flex justify-center items-center '>
+                                        <p className={'w-[10px] h-[10px] rounded-[50%] bg-[#4D0916]'}></p>
+                                        <p className={'font-[400] text-[14px] h-[20px] -ml-[5px]'} style={{ fontFamily: 'Noto sans' }}>Revenue</p>
+                                    </div>
+                                    <div className='w-auto h-[20px] gap-[8px] flex justify-center items-center '>
+                                        <p className={'w-[8px] h-[10px] rounded-[50%] bg-[#E91B41]'}></p>
+                                        <p className={'font-[400] text-[14px] h-[20px] text-nowrap'} style={{ fontFamily: 'Noto sans' }}>Ticket sales</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <Footer />
                 </div>
-
             </div>
         </div>
 
