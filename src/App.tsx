@@ -4,7 +4,7 @@ import './index.css'
 export default function App() {
 
   return (
-    <div className={'w-full h-full'}>
+    <div className={'w-full min-h-[100vh]'}>
       <Home />
     </div>
   )
