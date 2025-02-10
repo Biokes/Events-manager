@@ -7,7 +7,7 @@
   color-scheme: light dark;
   color: rgba(0, 0, 0, 0.87);
   background-color: #ffffff;
-
+  height: 100%;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -27,9 +27,9 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
+  /* min-width: 320px;*/
   min-height: 100vh;
-  /* min-width: 320px;
-  min-height: 100vh;*/
+  background-color: white;
 }
 
 h1 {

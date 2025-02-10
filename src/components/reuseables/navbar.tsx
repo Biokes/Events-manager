@@ -42,7 +42,7 @@ export default function Navbar() {
     ]
 
     return (
-        <div className={"flex felx-col justify-between items-center h-[40px] md:h-[60px] w-[100%] px-[30px] md:px-[5%] border-b-[1px] border-gray-100"}>
+        <div className={"flex felx-col justify-between items-center h-[40px] md:h-[60px] lg:h-[70px] w-[100%] px-[30px] md:px-[5%] border-b-[1px] border-gray-100 bg-white"}>
             <img src={"https://res.cloudinary.com/depwujqik/image/upload/v1739063688/Group_me54ta.png"} alt={"logo"} className={"h-[25px] md:h-[35px] "} />
             <section className={"md:flex gap-[5px] justify-center items-center hidden"}>
                 <img src={"https://res.cloudinary.com/depwujqik/image/upload/v1739067568/3a8bdf19c7b4f7e27422dcf2c356ae9e_pzcvqj.png"} className={"h-[30px] rounded-[50%]"} alt="profile picture" />
@@ -72,7 +72,7 @@ export default function Navbar() {
                         {rightBarList[0].map((data) => (
                             <div
                                 key={data.text}
-                                className={`flex items-center gap-3 px-3 py-2 rounded-md cursor-pointer ${
+                                className={`flex items-center gap-3 px-3 py-2 rounded-md hover:cursor-pointer ${
                                     currentIndex === data.text ? "bg-red-100 font-medium" : ""
                                 }`}
                                 onClick={() => toggle(data.text)}
@@ -84,11 +84,11 @@ export default function Navbar() {
                             </div>
                         ))}
                     </div>
-                    <div className="flex flex-col gap-3 px-4">
+                    <div className="flex flex-col gap-3 px-4 ">
                         {rightBarList[1].map((data) => (
                             <div
                                 key={data.text}
-                                className={`flex items-center gap-3 px-3 py-2 rounded-md cursor-pointer ${
+                                className={`flex items-center gap-3 px-3 py-2 rounded-md hover:cursor-pointer ${
                                     currentIndex === data.text ? "bg-red-100 font-medium" : ""
                                 }`}
                                 onClick={() => toggle(data.text)}

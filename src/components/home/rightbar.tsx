@@ -39,7 +39,7 @@ export default function Hero() {
             price: 'N5000'
         },
         {
-image:'https://res.cloudinary.com/depwujqik/image/upload/v1739063690/image_6_ypt1ad.png',
+            image: 'https://res.cloudinary.com/depwujqik/image/upload/v1739063690/image_6_ypt1ad.png',
             event: 'rave festival',
             Description: 'NeonGlow Festival is more than just a music festival—its a celebration of culture, creativity, and community. As our flagship annual event. NeonGlow Festival brings the spirit and vision...',
             time: '24 Jul 2025, 5:20 AM',
@@ -48,15 +48,15 @@ image:'https://res.cloudinary.com/depwujqik/image/upload/v1739063690/image_6_ypt
     ]
 
     return (
-        <div className={'flex h-full'}>
-            <div className='hidden md:w-[30vw] lg:w-[285px] bg-[white] border-r-[1px] border-gray-200 md:flex flex-col justify-between'>
+        <div className={'flex min-h-[100%] bg-gray-200'}>
+            <div className='hidden md:w-[25vw] lg:w-[280px] bg-[white] border-r-[1px] border-gray-200 md:flex flex-col justify-between md:pb-[1.5%]'>
                 <div className={'flex flex-col justify-between items-center py-[16px] gap-[15px] px-[5px] lg:px-0'}>
                     {
                         rightBarList[0].map((data) => (
-                            <div key={data.text} className={`rounded-sm w-full lg:w-[80%] flex justify-start items-center gap-[5px] lg:gap-[10px] py-[5px] pl-[10px] 
+                            <div key={data.text} className={`rounded-sm w-full md:w-[90%] lg:w-[80%]  flex hover:cursor-pointer justify-start items-center gap-[5px] lg:gap-[10px] py-[5px] pl-[10px] 
                                                 ${currentIndex === data.text ? 'bg-red-100 font-[500]' : ''}`} onClick={() => { toggle(data.text) }}>
                                 {data.icon(currentIndex === data.text ? color[1] : color[0])}
-                                <p className={`capitalize text-[10px] text-[8px] lg:text-[15px] text-nowrap${data.text === currentIndex ? 'text-red-900' : 'text-black'}`}>{data.text}</p>
+                                <p className={`capitalize md:text-[10px] text-[8px] lg:text-[15px] text-nowrap truncate ${data.text === currentIndex ? 'text-red-900' : 'text-black'}`}>{data.text}</p>
                             </div>
                         ))
                     }
@@ -64,17 +64,17 @@ image:'https://res.cloudinary.com/depwujqik/image/upload/v1739063690/image_6_ypt
                 <div className={'flex flex-col justify-between items-center py-[10px] gap-[16px]'}>
                     {
                         rightBarList[1].map((data) => (
-                            <div key={data.text} className={`rounded-sm w-[80%] flex justify-start items-center gap-[10px] text-[15px] py-[5px] pl-[10px] 
+                            <div key={data.text} className={`rounded-sm w-[80%] flex justify-start hover:cursor-pointer items-center gap-[10px] text-[15px] py-[5px] pl-[10px] 
                     ${currentIndex === data.text ? 'bg-red-100 font-[500]' : ''}`} onClick={() => { toggle(data.text) }}>
                                 {data.icon(currentIndex === data.text ? color[1] : color[0])}
-                                <p className={`capitalize text-[10px] lg:text-[15px] ${data.text === currentIndex ? 'text-red-900' : 'text-black'}`}>{data.text}</p>
+                                <p className={`capitalize text-[10px] md:text-[9px] lg:text-[15px] ${data.text === currentIndex ? 'text-red-900' : 'text-black'}`}>{data.text}</p>
                             </div>
                         ))
                     }
                 </div>
             </div>
 
-            <div className={'bg-gray-200 w-full p-[10px] gap-[10px]'}>
+            <div className={'bg-gray-200 w-[80%] p-[11px] gap-[10px] h-full'}>
                 <div className={'flex justify-between md:px-[20px]'}>
                     <div>
                         <p style={{ fontFamily: 'Noto Sans' }} className={'font-[600] capitalize text-[17px] lg:text-[20px] lg:h-[px]'}>welcome Izik</p>
@@ -143,7 +143,7 @@ image:'https://res.cloudinary.com/depwujqik/image/upload/v1739063690/image_6_ypt
                                     </div>
                                 </div>
                             </div>
-                            <Chart/>
+                            <Chart />
                         </div>
                     </div>
                     <Footer />
