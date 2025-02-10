@@ -1,0 +1,12 @@
+@media (min-height: 1100px){
+    .ipad{
+      height: 96dvh;
+      gap:40px;
+      width:95%
+    }
+    .ipadPack > div{
+      padding-bottom: 40px;
+      /* display:flex;
+      flex-direction: column; */
+    }
+}

@@ -10,7 +10,7 @@ import moneyIcon from "../../assets/moneyIcon.svg";
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import Chart from "./chart";
-
+import styles from '../../App.module.css'
 
 export default function Hero() {
     const [currentIndex, setCurrentIndex] = useState<string>("dashboard");
@@ -48,8 +48,8 @@ export default function Hero() {
     ]
 
     return (
-        <div className={'flex min-h-[100%] bg-gray-200'}>
-            <div className='hidden md:w-[25vw] lg:w-[280px] bg-[white] border-r-[1px] border-gray-200 md:flex flex-col justify-between md:pb-[1.5%]'>
+        <div className={'flex min-h-[100%] bg-gray-200 justify-center '}>
+            <div className='hidden md:w-[24vw] lg:w-[280px] bg-white border-r-[1px] border-gray-200 lg:flex flex-col justify-between md:pb-[1.5%] sm:pl-[15px]'>
                 <div className={'flex flex-col justify-between items-center py-[16px] gap-[15px] px-[5px] lg:px-0'}>
                     {
                         rightBarList[0].map((data) => (
@@ -74,7 +74,7 @@ export default function Hero() {
                 </div>
             </div>
 
-            <div className={'bg-gray-200 w-[80%] p-[11px] gap-[10px] h-full'}>
+            <div className={`bg-gray-200 flex flex-col w-[97%] sm:w-[81%] lg:w-[80%] p-[11px] sm:gap-[20px] lg:gap-[10px] h-full sm:pt-[20px] ${styles.ipad}`} >
                 <div className={'flex justify-between md:px-[20px]'}>
                     <div>
                         <p style={{ fontFamily: 'Noto Sans' }} className={'font-[600] capitalize text-[17px] lg:text-[20px] lg:h-[px]'}>welcome Izik</p>
@@ -83,8 +83,8 @@ export default function Hero() {
                     </div>
                     <button className={'bg-[#4D0916] text-white font-[600] px-[10px] md:px-0 w-[100px ] md:w-[150px] text-[10px] flex justify-center items-center lg:w-[170px] h-[30px] lg:h-[35px] sm:text-[14px]  capitalize'}>create event</button>
                 </div>
-                <div>
-                    <div className={'w-full flex flex-col lg:flex-row lg:justify-around items-center lg:h-[300px] gap-[10px] lg:gap-0'}>
+                <div className={styles.ipadPack}>
+                    <div className={'w-full flex flex-col lg:flex-row lg:justify-around items-center lg:h-[300px] gap-[15px] lg:gap-0'}>
                         <div className='bg-white lg:w-[55%] p-[10px] border-[1px] border-[#4D0916] rounded-md'>
                             <section className='flex justify-between items-cemter pr-[7px]'>
                                 <p className={'text-[10px] md:text-[14px] capitalize font-[600] '}>

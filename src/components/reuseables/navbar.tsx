@@ -44,7 +44,7 @@ export default function Navbar() {
     return (
         <div className={"flex felx-col justify-between items-center h-[40px] md:h-[60px] lg:h-[70px] w-[100%] px-[30px] md:px-[5%] border-b-[1px] border-gray-100 bg-white"}>
             <img src={"https://res.cloudinary.com/depwujqik/image/upload/v1739063688/Group_me54ta.png"} alt={"logo"} className={"h-[25px] md:h-[35px] "} />
-            <section className={"md:flex gap-[5px] justify-center items-center hidden"}>
+            <section className={"lg:flex gap-[5px] justify-center items-center hidden"}>
                 <img src={"https://res.cloudinary.com/depwujqik/image/upload/v1739067568/3a8bdf19c7b4f7e27422dcf2c356ae9e_pzcvqj.png"} className={"h-[30px] rounded-[50%]"} alt="profile picture" />
                 <div className={"hidden md:flex gap-[4px] justify-center items-center"}>
                     <p className={"capitalize text-black font-[500] text-[15px]"} style={{ fontFamily: 'Noto sans' }}>izik hilfilger</p>
@@ -58,7 +58,7 @@ export default function Navbar() {
                     }} />
                 </div>
             </section>
-            <div className='flex md:hidden' onClick={toggleMenu}>
+            <div className='flex lg:hidden' onClick={toggleMenu}>
                 <MenuIcon sx={{ color: '#4D0916' }} />
             </div>
               <div
