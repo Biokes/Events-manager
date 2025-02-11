@@ -1,96 +1,3 @@
-// import React from 'react';
-// import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LegendProps } from 'recharts';
-
-// const data = [
-//   {
-//     name: 'Page A',
-//     uv: 4000,
-//     pv: 2400,
-//     amt: 2400,
-//   },
-//   {
-//     name: 'Page B',
-//     uv: 3000,
-//     pv: 1398,
-//     amt: 2210,
-//   },
-//   {
-//     name: 'Page C',
-//     uv: 2000,
-//     pv: 9800,
-//     amt: 2290,
-//   },
-//   {
-//     name: 'Page D',
-//     uv: 2780,
-//     pv: 3908,
-//     amt: 2000,
-//   },
-//   {
-//     name: 'Page E',
-//     uv: 1890,
-//     pv: 4800,
-//     amt: 2181,
-//   },
-//   {
-//     name: 'Page F',
-//     uv: 2390,
-//     pv: 3800,
-//     amt: 2500,
-//   },
-//   {
-//     name: 'Page G',
-//     uv: 3490,
-//     pv: 4300,
-//     amt: 2100,
-//   },
-// ];
-
-// const Chart = () => {
-//   const [opacity, setOpacity] = React.useState({
-//     uv: 1,
-//     pv: 1,
-//   });
-
-//   const handleMouseEnter: LegendProps['onMouseEnter'] = (o) => {
-//     if (o && o.dataKey) {
-//       setOpacity((prev) => ({ ...prev, [o.dataKey as keyof typeof opacity]: 0.5 }));
-//     }
-//   };
-
-//   const handleMouseLeave: LegendProps['onMouseLeave'] = (o) => {
-//     if (o && o.dataKey) {
-//       setOpacity((prev) => ({ ...prev, [o.dataKey as keyof typeof opacity]: 1 }));
-//     }
-//   };
-
-//   return (
-//     <div style={{ width: '100%' }}>
-//       <ResponsiveContainer width="100%" height={300}>
-//         <LineChart
-//           width={500}
-//           height={300}
-//           data={data}
-//           margin={{
-//             top: 5,
-//             right: 30,
-//             left: 20,
-//             bottom: 5,
-//           }}
-//         >
-//           <CartesianGrid strokeDasharray="3 3" />
-//           <XAxis dataKey="name" />
-//           <YAxis />
-//           <Tooltip />
-//           <Legend onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} />
-//           <Line type="monotone" dataKey="pv" strokeOpacity={opacity.pv} stroke="#8884d8" activeDot={{ r: 8 }} />
-//           <Line type="monotone" dataKey="uv" strokeOpacity={opacity.uv} stroke="#82ca9d" />
-//         </LineChart>
-//       </ResponsiveContainer>
-//     </div>
-//   );
-// };
-// export default Chart;
 import { LineChart, Line, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer, CartesianGrid } from "recharts";
 
 const data = [
@@ -110,15 +17,22 @@ const data = [
 
 export default function Chart(){
   return (
-      <ResponsiveContainer width="100%" height={180}>
-        <LineChart data={data} margin={{ top: 0, right: 35, left: 0, bottom: 5 }}>
+      <ResponsiveContainer width="100%" height={180} >
+        <LineChart data={data} margin={{ top: 0, right: 30, left: -25, bottom: 5 }}>
           <CartesianGrid strokeDasharray="1 10" />
-          <XAxis dataKey="month" />
-          <YAxis />
-          <Tooltip />
-          <Legend />
-          <Line type="monotone" dataKey="revenue" stroke="#4A0D23" strokeWidth={2} dot={{ r: 0 }} />
-          <Line type="monotone" dataKey="tickets" stroke="#E5004F" strokeWidth={2} dot={{ r: 0 }} />
+        <XAxis dataKey="month" tick={{fontSize:7,fontWeight:'400'}} />
+          <YAxis dataKey={""} tick={{fontSize:8,fontWeight:'400'}}   tickFormatter={(month) => {if (typeof month !== "string") {
+          return String(month)
+        }
+    return month.charAt(0).toUpperCase() + month.slice(1);
+  }}/>
+        <Tooltip
+          contentStyle={{ background: "linear-gradient(to bottom,rgb(250, 229, 233) 1%,rgb(253, 247, 247),rgb(255, 255, 255),rgb(255, 255, 255),rgb(255, 255, 255))", borderRadius: "8px", border: "1px solid #ccc", padding: "10px",width:'150px'}}
+          itemStyle={{ color: "#4A0D23", fontSize: "12px", fontWeight: "thin",textTransform:'capitalize' }}
+          labelStyle={{ fontSize: "14px", fontWeight: "600", color: "#E5004F" }} />
+          <Legend fontSize={'7px'} fontWeight={"400"}/>
+          <Line type="monotone" dataKey="revenue" stroke="#4A0D23" strokeWidth={1} dot={{ r: 0 }} />
+          <Line type="monotone" dataKey="tickets" stroke="#E5004F" strokeWidth={1} dot={{ r: 0 }} />
         </LineChart>
       </ResponsiveContainer>
   );

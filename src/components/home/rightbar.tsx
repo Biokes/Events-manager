@@ -49,11 +49,11 @@ export default function Hero() {
 
     return (
         <div className={'flex min-h-[100%] bg-gray-200 justify-center '}>
-            <div className='hidden md:w-[24vw] lg:w-[280px] bg-white border-r-[1px] border-gray-200 lg:flex flex-col justify-between md:pb-[1.5%] sm:pl-[15px]'>
+            <div className='hidden md:w-[24vw] lg:w-[260px] bg-white border-r-[1px] border-gray-200 lg:flex flex-col justify-between md:pb-[1.5%] sm:pl-[10px]'>
                 <div className={'flex flex-col justify-between items-center py-[16px] gap-[15px] px-[5px] lg:px-0'}>
                     {
                         rightBarList[0].map((data) => (
-                            <div key={data.text} className={`rounded-sm w-full md:w-[90%] lg:w-[80%]  flex hover:cursor-pointer justify-start items-center gap-[5px] lg:gap-[10px] py-[5px] pl-[10px] 
+                            <div key={data.text} className={`rounded-sm w-full md:w-[90%] lg:w-[85%]  flex hover:cursor-pointer justify-start items-center gap-[5px] lg:gap-[10px] py-[5px] pl-[10px] 
                                                 ${currentIndex === data.text ? 'bg-red-100 font-[500]' : ''}`} onClick={() => { toggle(data.text) }}>
                                 {data.icon(currentIndex === data.text ? color[1] : color[0])}
                                 <p className={`capitalize md:text-[10px] text-[8px] lg:text-[15px] text-nowrap truncate ${data.text === currentIndex ? 'text-red-900' : 'text-black'}`}>{data.text}</p>
@@ -74,7 +74,7 @@ export default function Hero() {
                 </div>
             </div>
 
-            <div className={`bg-gray-200 flex flex-col w-[97%] sm:w-[81%] lg:w-[80%] p-[11px] sm:gap-[20px] lg:gap-[10px] h-full sm:pt-[20px] ${styles.ipad}`} >
+            <div className={`bg-gray-200 flex flex-col w-[97%] sm:w-[81%] lg:w-full p-[11px] sm:gap-[20px] lg:gap-[10px] h-full sm:pt-[20px] ${styles.ipad}`} >
                 <div className={'flex justify-between md:px-[20px]'}>
                     <div>
                         <p style={{ fontFamily: 'Noto Sans' }} className={'font-[600] capitalize text-[17px] lg:text-[20px] lg:h-[px]'}>welcome Izik</p>
@@ -85,7 +85,7 @@ export default function Hero() {
                 </div>
                 <div className={styles.ipadPack}>
                     <div className={'w-full flex flex-col lg:flex-row lg:justify-around items-center lg:h-[300px] gap-[15px] lg:gap-0'}>
-                        <div className='bg-white lg:w-[55%] p-[10px] border-[1px] border-[#4D0916] rounded-md'>
+                        <div className='bg-white lg:w-[53%] p-[10px] border-[1px] border-[#4D0916] rounded-md'>
                             <section className='flex justify-between items-cemter pr-[7px]'>
                                 <p className={'text-[10px] md:text-[14px] capitalize font-[600] '}>
                                     upcoming events
@@ -119,7 +119,7 @@ export default function Hero() {
                                 }
                             </div>
                         </div>
-                        <div className={'lg:w-[40%] w-full bg-white rounded-md border-[1px] border-[#4D0916] rounded-md'}>
+                        <div className={'lg:w-[45%] w-full bg-white rounded-md border-[1px] border-[#4D0916] rounded-md'}>
                             <div className={' w-full p-[7px_13px] gap-[10px]'}>
                                 <header className={'h-[20px] flex justify-between'}>
                                     <div className='flex gap-[4px] justify-center items-center'>

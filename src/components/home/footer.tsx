@@ -36,7 +36,7 @@ export default function Footer() {
         { id: 'C1672', name: "James jr", event: "Christmass carol event",noOfTickets:4, totalPrice:'N5,000',date:'June 23, 2025 1:59 pm', status:active() },
     ];
     return (
-        <div className={'flex flex-col border-[1px] border-[#4D0916] px-[10px] bg-white rounded-md my-[10px] gap-[7px] py-[10px]'}>
+        <div className={'flex flex-col border-[1px] border-[#4D0916] px-[10px] bg-white rounded-md my-[10px] gap-[7px] py-[10px] lg:px-[15px]'}>
             <section className='flex justify-between items-cemter pr-[7px] py-[7px]'>
                 <p className={'text-[15px] md:text-[17px] font-[600] '}>
                     Recent tickets purchased
