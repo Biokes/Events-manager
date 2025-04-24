@@ -11,6 +11,7 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import Chart from "./chart";
 import styles from '../../App.module.css'
+import {upcomingEvents} from "../../utils";
 
 export default function Hero() {
     const [currentIndex, setCurrentIndex] = useState<string>("dashboard");
@@ -30,25 +31,12 @@ export default function Hero() {
         ]
     ]
 
-    const upcomingEvents = [
-        {
-            image: 'https://res.cloudinary.com/depwujqik/image/upload/v1739063690/image_5_dkeknx.png',
-            event: 'NeonGlow festival',
-            Description: 'NeonGlow Festival is more than just a music festival—its a celebration of culture, creativity, and community. As our flagship annual event. NeonGlow Festival brings the spirit and vision...',
-            time: '24 Jul 2025, 5:20 AM',
-            price: 'N5000'
-        },
-        {
-            image: 'https://res.cloudinary.com/depwujqik/image/upload/v1739063690/image_6_ypt1ad.png',
-            event: 'rave festival',
-            Description: 'NeonGlow Festival is more than just a music festival—its a celebration of culture, creativity, and community. As our flagship annual event. NeonGlow Festival brings the spirit and vision...',
-            time: '24 Jul 2025, 5:20 AM',
-            price: '$200'
-        }
-    ]
+    const user ={
+        name:'Biokes'
+    }
 
     return (
-        <div className={'flex min-h-[100%] bg-gray-200 justify-center '}>
+        <div className={'flex h-screen w-screen bg-gray-200 justify-center '}>
             <div className='hidden md:w-[24vw] lg:w-[260px] bg-white border-r-[1px] border-gray-200 lg:flex flex-col justify-between md:pb-[1.5%] sm:pl-[10px]'>
                 <div className={'flex flex-col justify-between items-center py-[16px] gap-[15px] px-[5px] lg:px-0'}>
                     {
@@ -77,7 +65,7 @@ export default function Hero() {
             <div className={`bg-gray-200 flex flex-col w-[97%] sm:w-[81%] lg:w-full p-[11px] sm:gap-[20px] lg:gap-[10px] h-full sm:pt-[20px] ${styles.ipad}`} >
                 <div className={'flex justify-between md:px-[20px]'}>
                     <div>
-                        <p style={{ fontFamily: 'Noto Sans' }} className={'font-[600] capitalize text-[17px] lg:text-[20px] lg:h-[px]'}>welcome Izik</p>
+                        <p style={{ fontFamily: 'Noto Sans' }} className={'font-[600] capitalize text-[17px] lg:text-[20px] lg:h-[px]'}>welcome {user.name}</p>
                         <p style={{ fontFamily: 'Noto Sans' }} className={'font-[400] text-[8px] sm:text-[13px] lg:text-[16px] h-[24px]'}>
                             Create, track and manage your event</p>
                     </div>
